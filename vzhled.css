@@ -11,7 +11,7 @@ body {
     background-color: #5555a3;
     color: white;
     display: flex;
-    gap: 20px;           /* mezera mezi tlačítky */
+    gap: 80px;           /* mezera mezi tlačítky */
     padding: 15px 20px;  /* výška panelu */
     border-radius: 10px; /* zaoblené rohy panelu */
     margin: 20px 50px 0 50px; /* odsazení od horního okraje a stran */
@@ -41,3 +41,4 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
