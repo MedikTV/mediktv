@@ -1,0 +1,43 @@
+/* vzhled.css */
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #e0d5d5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Horní panel */
+.panel {
+    background-color: #5555a3;
+    color: white;
+    display: flex;
+    gap: 20px;           /* mezera mezi tlačítky */
+    padding: 15px 20px;  /* výška panelu */
+    border-radius: 10px; /* zaoblené rohy panelu */
+    margin: 20px 50px 0 50px; /* odsazení od horního okraje a stran */
+}
+
+.panel a {
+    background-color: #C0C0C0;
+    border: 2px solid #808080;
+    padding: 15px 25px;   /* velikost tlačítka */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;    /* mírně zaoblené tlačítko */
+    transition: background-color 0.2s;
+}
+
+.panel a:hover {
+    background-color: #FFFFFF;
+}
+
+/* Hlavní obsah */
+.obsah {
+    padding: 20px 50px;
+}
+
+/* Seznam PC setup */
+.obsah ul {
+    list-style-type: square;
+}
