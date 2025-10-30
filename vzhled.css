@@ -8,6 +8,7 @@ body {
 
 /* Horní panel */
 .panel {
+    flex: none;
     background-color: #5555a3;
     color: white;
     display: flex;
@@ -42,6 +43,7 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
 
 
 
