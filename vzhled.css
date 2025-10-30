@@ -18,7 +18,7 @@ body {
 }
 
 .panel a {
-    flex: none;
+    display: flex;
     display: inline-block;
     background-color: #C0C0C0;
     border: 2px solid #808080;
@@ -43,6 +43,7 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
 
 
 
