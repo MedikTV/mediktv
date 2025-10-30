@@ -20,7 +20,7 @@ body {
 .panel a {
     background-color: #C0C0C0;
     border: 2px solid #808080;
-    padding: 40px 25px;   /* velikost tlačítka */
+    padding: 15px 40px;   /* velikost tlačítka */
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -41,6 +41,7 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
 
 
 
