@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: black;
+    background-color: #B0A7A7;
 }
 
 .hlavicka {
@@ -52,7 +53,6 @@ body {
 .obsah {
     padding: 20px 50px;
     text-align: center;
-    background-color: #B0A7A7;
 }
 
 .obsah img {
@@ -60,6 +60,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
