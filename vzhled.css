@@ -1,20 +1,17 @@
 /* Základní styl */
 body {
-    font-family: Tahoma, Verdana, sans-serif;
-    background-image: url("images/birch_planks.png"); /* pozadí */
-    background-repeat: repeat;
-    background-size: 128px 128px;
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
     color: black;
 }
 
 .hlavicka {
+    background-color: #1A1313;
+    padding: 15px 30px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 10px 20px;
+    justify-content: space-between;
+    border-radius: 0 0 15px 15px;
 }
 
 .logo {
@@ -55,6 +52,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
