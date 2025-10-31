@@ -1,12 +1,13 @@
 /* Základní styl */
 body {
+    font-family: Tahoma, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: black;
 }
 
 .hlavicka {
-    background-color: #1A1313;
+    background-color: #2B2020;
     padding: 15px 30px;
     display: flex;
     align-items: center;
@@ -52,6 +53,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
