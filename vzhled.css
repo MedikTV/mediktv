@@ -16,6 +16,11 @@ body {
     
 }
 
+.hlavicka .menu a {
+    color: #B0A7A7;        /* světle šedá barva textu */
+    font-weight: bold;
+}
+
 .hlavicka .menu {
     margin-left: 30px;  /* oddělení menu od loga */
 }
@@ -58,6 +63,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
