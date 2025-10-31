@@ -1,11 +1,15 @@
+/* Základní styl */
 body {
     font-family: Tahoma, Verdana, sans-serif;
-    background-color: #e0d5d5;
+    background-image: url("images/birch_planks.png"); /* pozadí */
+    background-repeat: repeat;
+    background-size: 128px 128px;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
+    color: black;
 }
 
-/* Hlavička */
 .hlavicka {
     display: flex;
     align-items: center;
@@ -34,16 +38,21 @@ body {
 }
 
 .menu a:hover {
-    background-color: #C0C0C0;
+    background-color: #5a73c7;
 }
 
+    
 /* Obsah */
 .obsah {
     padding: 20px 50px;
+    text-align: center;
 }
 
-.obsah ul {
-    list-style-type: square;
+.obsah img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
-/* Preloader se může přesunout i sem, pokud chceš */
+
+
