@@ -52,6 +52,7 @@ body {
 .obsah {
     padding: 20px 50px;
     text-align: center;
+    backround-color: #B0A7A7;
 }
 
 .obsah img {
@@ -59,6 +60,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
