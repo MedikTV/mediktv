@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Petruv web</title>
     <link rel="stylesheet" href="vzhled.css">
-    <link rel="stylesheet" href="vzhled.css">
-
 </head>
 <body>
 
@@ -15,18 +13,26 @@
 </div>
 
 <div class="obsah">
-    <h1 align="center">O mně</h1>
-    <p align="center">Jsem Petr, student IT</p>
-    <p align="center">Rad hraju kostičky (mc) </p>
-    <center>
-    <img src="profil.png" alt="Já" width="300" style="border-radius: 10px;">
-</center>
-    
-
+    <h1>O mně</h1>
+    <p>Jsem Petr, student IT</p>
+    <p>Rád hraju kostičky (MC)</p>
+    <img src="profil.png" alt="Já" width="300">
 </div>
+
+
+<div id="welcome" class="welcome-box">Vítej na mém webu</div>
+
+<script>
+window.onload = function() {
+    const box = document.getElementById("welcome");
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 3000); // zmizí po 3s
+}
+</script>
 
 </body>
 </html>
+
 
 
 
