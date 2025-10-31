@@ -7,11 +7,19 @@
 </head>
 <body>
 
-<div class="panel">
-    <a href="index.html">O mně</a>
-    <a href="pcsetup.html">PC setup</a>
-</div>
+<!-- Hlavní hlavička -->
+<header class="hlavicka">
+    <div class="logo">
+        <img src="hlava.png" alt="MC hlava" width="50" height="50">
+    </div>
+    <nav class="menu">
+        <a href="index.html">O mně</a>
+        <a href="pcsetup.html">PC setup</a>
+    </nav>
+    <button id="darkModeBtn">🌙</button>
+</header>
 
+<!-- Hlavní obsah -->
 <div class="obsah">
     <h1>O mně</h1>
     <p>Jsem Petr, student IT</p>
@@ -19,23 +27,23 @@
     <img src="profil.png" alt="Já" width="300">
 </div>
 
-
-<div id="welcome" class="welcome-box">Vítej na mém webu</div>
+<!-- Moderní pozdrav místo alertu -->
+<div id="welcome" class="welcome-box">Vítej na mém webu! 👋</div>
 
 <script>
+// Popup pozdrav
 window.onload = function() {
     const box = document.getElementById("welcome");
     box.style.display = "block";
-    setTimeout(() => { box.style.display = "none"; }, 3000); // zmizí po 3s
+    setTimeout(() => { box.style.display = "none"; }, 3000);
 }
+
+// Tmavý režim
+const darkBtn = document.getElementById("darkModeBtn");
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
