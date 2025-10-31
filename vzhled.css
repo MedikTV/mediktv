@@ -26,6 +26,7 @@ body {
     font-weight: bold;
     border-radius: 5px;    /* mírně zaoblené tlačítko */
     transition: background-color 0.2s;
+     justify-content: center;
 }
 
 .panel a:hover {
@@ -41,6 +42,7 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
 
 
 
