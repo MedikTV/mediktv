@@ -20,13 +20,12 @@ body {
 .panel a {
     background-color: #C0C0C0;
     border: 2px solid #808080;
-    padding: 15px 25px;   /* velikost tlačítka */
+    padding: 15px 80px;   /* velikost tlačítka */
     text-decoration: none;
     color: black;
     font-weight: bold;
     border-radius: 5px;    /* mírně zaoblené tlačítko */
     transition: background-color 0.2s;
-    width: 200px;
 }
 
 .panel a:hover {
@@ -42,6 +41,7 @@ body {
 .obsah ul {
     list-style-type: square;
 }
+
 
 
 
