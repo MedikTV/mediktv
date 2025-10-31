@@ -1,7 +1,7 @@
 /* Základní styl */
 body {
     font-family: Tahoma, Verdana, sans-serif;
-    background-image: url("images/stone.png"); /* pozadí */
+    background-image: url("images/birch_planks.png"); /* pozadí */
     background-repeat: repeat;
     background-size: 128px 128px;
     background-attachment: fixed;
@@ -56,3 +56,4 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
