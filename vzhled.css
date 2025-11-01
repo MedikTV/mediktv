@@ -110,7 +110,7 @@ body {
 .perif-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* blíže k nadpisu */
+    margin-top: 20px;
 }
 
 .perif-table {
@@ -119,13 +119,11 @@ body {
     border-collapse: collapse;
     background-color: #2E2727;
     color: #B0A7A7;
-    border: 1px solid #3A3232;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    table-layout: fixed; /* aby všechny sloupce měly stejnou šířku */
+    table-layout: fixed; /* všechny sloupce stejně široké */
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    overflow: hidden;
 }
 
 .perif-table th, .perif-table td {
@@ -134,16 +132,16 @@ body {
 }
 
 .perif-table th {
-    border-bottom: 2px solid #3F3737; /* jen pod nadpisem */
+    border-bottom: 2px solid #3F3737; /* jen pod hlavičkou */
     background-color: #332C2C;
     color: #E1E1E1;
-    text-align: left;
 }
 
-.perif-table tr:hover {
+.perif-table tr:not(:first-child):hover {
     background-color: #3A3232;
     transition: background-color 0.3s;
 }
+
 
 
 
