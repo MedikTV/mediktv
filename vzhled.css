@@ -61,29 +61,26 @@ body {
     border-radius: 10px;
 }
 
-/* === Styl pro sekci PC Setup === */
 .setup-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .setup-box {
-    display: flex;
-    align-items: center;
     background-color: #2E2727;
     border-radius: 15px;
-    padding: 20px 30px;
-    width: 80%;
-    max-width: 1000px;
+    padding: 25px;
+    width: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .setup-box:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
@@ -91,25 +88,19 @@ body {
     width: 200px;
     height: auto;
     border-radius: 10px;
-    margin-right: 40px;
+    margin-bottom: 15px;
 }
 
 .setup-text h2 {
-    margin-top: 0;
-    color: #D9D9D9;
+    color: #E1E1E1;
+    margin-bottom: 10px;
 }
 
 .setup-text ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
     color: #C0C0C0;
 }
-
-.setup-text li {
-    margin-bottom: 5px;
-}
-
 
 
 
