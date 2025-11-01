@@ -8,7 +8,7 @@ body {
 }
 
 .hlavicka {
-    background-color: #262121;
+    background-color: #453D3D;
     padding: 15px 30px;
     display: flex;
     align-items: center;
@@ -60,6 +60,7 @@ body {
     margin: 20px auto;
     border-radius: 10px;
 }
+
 
 
 
