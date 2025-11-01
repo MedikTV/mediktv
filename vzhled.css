@@ -70,37 +70,44 @@ body {
 }
 
 .setup-box {
-    background-color: #2E2727;
+    background-color: #2E2727; /* tmavě hnědošedá */
+    border: 1px solid #3A3232;
     border-radius: 15px;
     padding: 25px;
-    width: 400px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+    width: 380px;
+    color: #B0A7A7; /* světle šedý text */
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: left;
 }
 
 .setup-box:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
-}
-
-.setup-box img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    background-color: #332C2C; /* o trochu světlejší, decentní zvýraznění */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .setup-text h2 {
-    color: #E1E1E1;
+    color: #E1E1E1; /* světlejší pro nadpis */
     margin-bottom: 10px;
+    border-bottom: 2px solid #3F3737;
+    padding-bottom: 5px;
 }
 
 .setup-text ul {
     list-style: none;
     padding: 0;
-    color: #C0C0C0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
 }
+
+.setup-text li b {
+    color: #C8C3C3; /* jemně zvýrazněný text */
+}
+
+
+
 
 
 
