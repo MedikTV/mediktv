@@ -107,6 +107,44 @@ body {
 }
 
 
+.perif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.perif-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #2E2727;
+    color: #B0A7A7;
+    border: 1px solid #3A3232;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.perif-table th {
+    background-color: #332C2C;
+    color: #E1E1E1;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 18px;
+}
+
+.perif-table td {
+    padding: 12px 16px;
+    border-top: 1px solid #3A3232;
+}
+
+.perif-table tr:hover {
+    background-color: #3A3232;
+    transition: background-color 0.3s;
+}
+
+
+
+
 
 
 
