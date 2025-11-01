@@ -5,6 +5,81 @@
     <title>Hardware – Petruv web</title>
     <link rel="stylesheet" href="vzhled.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* --- KARTY --- */
+        .setup-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .setup-box {
+            width: 380px;
+            background-color: #2E2727;
+            border-radius: 15px;
+            padding: 25px;
+            color: #B0A7A7;
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            text-align: left;
+        }
+
+        .setup-box:hover {
+            transform: scale(1.03);
+            background-color: #332C2C;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .setup-text h2 {
+            color: #E1E1E1;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3F3737;
+            padding-bottom: 5px;
+        }
+
+        .setup-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .setup-text li b {
+            color: #C8C3C3;
+        }
+
+        /* --- TABULKA PERIFERIÍ --- */
+        .perif-table {
+            width: calc(2 * 380px + 40px); /* dvě karty + mezera */
+            border-collapse: collapse;
+            background-color: #2E2727;
+            color: #B0A7A7;
+            border: 1px solid #3A3232;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .perif-table th, .perif-table td {
+            padding: 12px 16px;
+            border-top: 1px solid #3A3232;
+        }
+
+        .perif-table th {
+            background-color: #332C2C;
+            color: #E1E1E1;
+        }
+
+        .perif-table tr:hover {
+            background-color: #3A3232;
+            transition: background-color 0.3s;
+        }
+    </style>
 </head>
 <body>
 
@@ -98,7 +173,7 @@
             </tr>
         </table>
     </div>
-</div>
 
+</div>
 </body>
 </html>
