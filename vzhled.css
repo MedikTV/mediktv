@@ -61,6 +61,57 @@ body {
     border-radius: 10px;
 }
 
+/* === Styl pro sekci PC Setup === */
+.setup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.setup-box {
+    display: flex;
+    align-items: center;
+    background-color: #2E2727;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.setup-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.setup-box img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.setup-text h2 {
+    margin-top: 0;
+    color: #D9D9D9;
+}
+
+.setup-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #C0C0C0;
+}
+
+.setup-text li {
+    margin-bottom: 5px;
+}
+
+
+
 
 
 
