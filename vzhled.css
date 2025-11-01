@@ -114,8 +114,8 @@ body {
 }
 
 .perif-table {
-    width: 2 * 380px + 40px; /* dvě karty + mezera mezi nimi */
-    max-width: 820px; /* 2*380 + 60px mezera */
+    width: calc(2 * 380px + 40px); /* dvě karty + mezera */
+    max-width: 820px; /* pro jistotu */
     border-collapse: collapse;
     background-color: #2E2727;
     color: #B0A7A7;
@@ -125,6 +125,12 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     table-layout: auto;
     text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.perif-table:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
 .perif-table th, .perif-table td {
@@ -141,6 +147,7 @@ body {
     background-color: #3A3232;
     transition: background-color 0.3s;
 }
+
 
 
 
