@@ -2,46 +2,47 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Petruv web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty | MediKTV</title>
     <link rel="stylesheet" href="vzhled.css">
 </head>
 <body>
 
-<header class="hlavicka">
-    <img src="images/hlava.png" alt="MC hlava" class="logo">
-    <nav class="menu">
-        <a href="index.html">Domů</a>
-        <a href="ome.html">O mně</a>
-        <a href="pcsetup.html">Hardware</a>
-        <a href="projekty.html">Projekty</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="kontakt.html">Kontakt</a>
-        
-    </nav>
-</header>
+    <div class="hlavicka">
+        <div class="logo">
+            <h1>MediKTV</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Domů</a>
+            <a href="pcsetup.html">PC Setup</a>
+            <a href="projekty.html" class="aktivni">Projekty</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </div>
 
+    <div class="obsah">
+        <h1>Moje projekty</h1>
 
-<div class="obsah">
-    <h1>PC Setup</h1>
-    <ul>
-    
-        <li>Procesor: AMD Ryzen 5 7600</li>
-        <li>RAM: 32GB DDR5 </li>
-        <li>GPU: AMD Radeon RX 7700XT</li>
-        <li>SSD: 2TB</li>
-        <li>Chlazení: ano</li>
-        <li>Skříň: taky mám </li>
-        <li>Zdroj: Seasonic 750W </li> 
-        
-    </ul>
-</div>
+        <div class="setup-container">
+
+            <div class="setup-box">
+                <img src="images/prevodnikcasu.png" alt="Převodník času" class="setup-img">
+                <div class="setup-text">
+                    <h2>Převodník času</h2>
+                    <p>
+                        Jednoduchý program napsaný v Pythonu, který převádí časové jednotky 
+                        mezi sekundami, minutami, hodinami a dny. 
+                        Program má přehledné uživatelské rozhraní a slouží jako ukázka práce s funkcemi a vstupy od uživatele.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="paticka">
+        <p>&copy; 2025 MediKTV</p>
+    </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
