@@ -2,47 +2,76 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekty | MediKTV</title>
+    <title>Petruv web – Projekty</title>
     <link rel="stylesheet" href="vzhled.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
 
+<body>
 
-    <header class="hlavicka">
+<!-- HLAVIČKA -->
+<header class="hlavicka">
     <img src="images/hlava.png" alt="MC hlava" class="logo">
     <nav class="menu">
         <a href="index.html">Domů</a>
         <a href="ome.html">O mně</a>
         <a href="pcsetup.html">Hardware</a>
-        <a href="projekty.html">Projekty</a>
+        <a href="projekty.html" class="aktivni">Projekty</a>
         <a href="galerie.html">Galerie</a>
         <a href="kontakt.html">Kontakt</a>
-</head>
-<body>
-    </div>
+    </nav>
+</header>
 
-    <div class="obsah">
-        <h1>Moje projekty</h1>
+<!-- OBSAH STRÁNKY -->
+<div class="obsah">
+    <h1>Moje projekty</h1>
 
-        <div class="setup-container">
+    <div class="setup-container">
 
-            <div class="setup-box">
-                <img src="images/prevodnikcasu.png" alt="Převodník času" class="setup-img">
-                <div class="setup-text">
-                    <h2>Převodník času</h2>
-                    <p>
-                        Jednoduchý program napsaný v Pythonu, který převádí časové jednotky 
-                        mezi sekundami, minutami, hodinami a dny. 
-                        Program má přehledné uživatelské rozhraní a slouží jako ukázka práce s funkcemi a vstupy od uživatele.
-                    </p>
-                </div>
+        <!-- Projekt 1 -->
+        <div class="setup-box">
+            <img src="images/prevodnikcasu.png" alt="Převodník času" class="setup-img">
+            <div class="setup-text">
+                <h2>Převodník času</h2>
+                <p>
+                    Jednoduchý převodník napsaný v Pythonu. 
+                    Umožňuje převádět sekundy na minuty, hodiny a dny.
+                    Byl vytvořen jako menší cvičný projekt pro práci s funkcemi a vstupy uživatele.
+                </p>
             </div>
-
         </div>
-    </div>
 
-    <div class="paticka">
-        <p>&copy; 2025 MediKTV</p>
+        <!-- Projekt 2 -->
+        <div class="setup-box">
+            <div class="setup-text">
+                <h2>Simulátor systému</h2>
+                <p>
+                    Grafické prostředí vytvořené v Pythonu pomocí knihovny Tkinter. 
+                    Obsahuje jednoduchý poznámkový blok, správce úloh a prohlížeč souborů.
+                    Cílem bylo vytvořit základní „mini operační systém“.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projekt 3 -->
+        <div class="setup-box">
+            <div class="setup-text">
+                <h2>Mini terminál</h2>
+                <p>
+                    Konzolová aplikace pro práci s příkazy, 
+                    která umí zobrazovat systémové informace a otevírat textové soubory. 
+                    Jednoduchý projekt ukazující práci s CLI a Pythonem.
+                </p>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<!-- PATIČKA -->
+<footer class="paticka">
+    <p>&copy; 2025 Petruv web</p>
+</footer>
 
 </body>
 </html>
