@@ -28,22 +28,26 @@
 
     <div class="setup-container">
 
-       <!-- Projekt 1 -->
-<div class="setup-box">
-    <img src="images/prevodnikcasu.png" alt="Převodník času" class="setup-img" data-lightbox="true">
-    <div class="setup-text">
-        <h2>Převodník času</h2>
-        <p>
-            Jednoduchý převodník napsaný v Pythonu. 
-            Umožňuje převádět sekundy na minuty, hodiny a dny.
-            Byl vytvořen jako menší cvičný projekt pro práci s funkcemi a vstupy uživatele.
-        </p>
-    </div>
+        <!-- Projekt 1 -->
+        <div class="setup-box">
+            <img src="images/prevodnikcasu.png" alt="Převodník času" class="lightbox">
+            <div class="setup-text">
+                <h2>Převodník času</h2>
+                <p>
+                    Jednoduchý převodník napsaný v Pythonu. 
+                    Umožňuje převádět sekundy na minuty, hodiny a dny.
+                    Byl vytvořen jako menší cvičný projekt pro práci s funkcemi a vstupy uživatele.
+                </p>
+            </div>
+        </div>
+        <!-- Přidáme lightbox (skrytý dokud se neklikne) -->
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Zvětšený obrázek">
 </div>
 
-<!-- Projekt 2 -->
+       <!-- Projekt 2 -->
 <div class="setup-box">
-    <img src="images/pyos_desktop.png" alt="Py systém" class="setup-img" data-lightbox="true">
+    <img src="images/pyos_desktop.png" alt="Py systém" class="setup-img" id="pyos-img">
     <div class="setup-text">
         <h2>Simulátor systému</h2>
         <p>
@@ -52,6 +56,11 @@
             Cílem bylo vytvořit základní „mini operační systém“.
         </p>
     </div>
+</div>
+
+<!-- Přidáme lightbox (skrytý dokud se neklikne) -->
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Zvětšený obrázek">
 </div>
 
 
@@ -76,11 +85,6 @@
 </footer>
 
     <script src="script.js"></script>
-    <!-- Přidáme lightbox (skrytý dokud se neklikne) -->
-<div id="lightbox">
-    <img id="lightbox-img" src="" alt="Zvětšený obrázek">
-</div>
-
 
 
 </body>
