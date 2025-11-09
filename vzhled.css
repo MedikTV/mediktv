@@ -148,18 +148,23 @@ body {
 /* ---- Projekty ---- */
 .setup-img {
     width: 100%;
-    height: auto;
+    height: 200px; /* pevná výška pro všechny obrázky */
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
-    object-fit: cover;
+    object-fit: cover; /* obrázek se ořízne, ale vyplní plochu */
+    display: block;
 }
 
-.setup-box:hover .setup-img {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+/* zarovnání textu, aby všechny boxy měly stejnou výšku */
+.setup-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 }
+
 
 
 
