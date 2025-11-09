@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const pyosImg = document.getElementById("pyos-img");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 
-    document.querySelectorAll('[data-lightbox="true"]').forEach(img => {
-        img.addEventListener("click", () => {
-            lightboxImg.src = img.src;
-            lightbox.style.display = "flex";
-        });
+    pyosImg.addEventListener("click", () => {
+        lightboxImg.src = pyosImg.src; // použije stejný obrázek
+        lightbox.style.display = "flex";
     });
 
     lightbox.addEventListener("click", () => {
-        lightbox.style.display = "none";
+        lightbox.style.display = "none"; // zavření kliknutím kamkoliv
     });
 });
