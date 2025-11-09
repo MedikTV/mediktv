@@ -41,18 +41,24 @@
             </div>
         </div>
 
-        <!-- Projekt 2 -->
-        <div class="setup-box">
-            <img src="images/pyos_desktop.png" alt="Py systém" class="setup-img">
-            <div class="setup-text">
-                <h2>Simulátor systému</h2>
-                <p>
-                    Grafické prostředí vytvořené v Pythonu pomocí knihovny Tkinter. 
-                    Obsahuje jednoduchý poznámkový blok, správce úloh a prohlížeč souborů.
-                    Cílem bylo vytvořit základní „mini operační systém“.
-                </p>
-            </div>
-        </div>
+       <!-- Projekt 2 -->
+<div class="setup-box">
+    <img src="images/pyos_desktop.png" alt="Py systém" class="setup-img" id="pyos-img">
+    <div class="setup-text">
+        <h2>Simulátor systému</h2>
+        <p>
+            Grafické prostředí vytvořené v Pythonu pomocí knihovny Tkinter. 
+            Obsahuje jednoduchý poznámkový blok, správce úloh a prohlížeč souborů.
+            Cílem bylo vytvořit základní „mini operační systém“.
+        </p>
+    </div>
+</div>
+
+<!-- Přidáme lightbox (skrytý dokud se neklikne) -->
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Zvětšený obrázek">
+</div>
+
 
         <!-- Projekt 3 -->
         <div class="setup-box">
@@ -73,6 +79,9 @@
 <footer class="paticka">
     <p>&copy; 2025 Petruv web</p>
 </footer>
+
+    <script src="script.js"></script>
+
 
 </body>
 </html>
