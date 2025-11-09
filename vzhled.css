@@ -148,14 +148,16 @@ body {
 /* ---- Projekty ---- */
 .setup-img {
     width: 100%;
-    height: 200px; /* pevná výška pro všechny obrázky */
+    height: 200px; /* nebo 220–250px, podle toho jak to vypadá */
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
-    object-fit: cover; /* obrázek se ořízne, ale vyplní plochu */
+    object-fit: contain; /* zobrazí celý obrázek */
+    background-color: #1E1A1A; /* přidá tmavé pozadí okolo obrázku */
     display: block;
 }
+
 
 /* zarovnání textu, aby všechny boxy měly stejnou výšku */
 .setup-box {
@@ -164,6 +166,7 @@ body {
     justify-content: flex-start;
     height: 100%;
 }
+
 
 
 
