@@ -161,11 +161,42 @@ body {
 
 /* zarovnání textu, aby všechny boxy měly stejnou výšku */
 .setup-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+    background-color: #2E2727;
+    border: 1px solid #3A3232;
+    border-radius: 15px;
+    padding: 25px;
+    width: 420px; /* větší karta */
+    color: #B0A7A7;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: left;
 }
+
+.setup-box:hover {
+    transform: scale(1.03);
+    background-color: #332C2C;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Obrázky */
+.setup-img {
+    width: 100%;
+    height: auto; /* zachová poměr stran */
+    max-height: 300px; /* aby nebyly moc vysoké */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: contain; /* žádné ořezání */
+    background-color: #1E1A1A;
+}
+
+.setup-box:hover .setup-img {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
 
 
 
