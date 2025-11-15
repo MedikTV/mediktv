@@ -376,3 +376,182 @@ h1 {
     transform: translateY(-2px);
 }
 
+/* ---------------------- ZÁKLADNÍ NASTAVENÍ ---------------------- */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+/* --------------------------- HLAVIČKA ---------------------------- */
+.hardware-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 15px 40px;
+    border-bottom: 2px solid #2C2C2C;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.hardware-header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hardware-header .logo-container .logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.hardware-header .logo-container h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.hardware-header .menu {
+    display: flex;
+    gap: 25px;
+}
+
+.hardware-header .menu a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.hardware-header .menu a:hover,
+.hardware-header .menu a.active {
+    color: #4AA8FF;
+    transform: translateY(-2px);
+}
+
+/* --------------------------- OBSAH ---------------------------- */
+.obsah {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.obsah h1, .obsah h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.obsah ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.obsah ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #2C2C2C;
+}
+
+.obsah ul li b {
+    color: #4AA8FF;
+}
+
+/* --------------------------- KARTY ---------------------------- */
+.setup-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.setup-box {
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    width: 350px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.setup-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    background-color: #242424;
+}
+
+.setup-box h2 {
+    margin-top: 0;
+    color: #4AA8FF;
+    margin-bottom: 15px;
+}
+
+.setup-box ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* --------------------------- TABULKA PERIFERIÍ ---------------------------- */
+.perif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.perif-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.perif-table th, .perif-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #2C2C2C;
+    color: #E0E0E0;
+    text-align: left;
+}
+
+.perif-table th {
+    background-color: #242424;
+    font-weight: bold;
+}
+
+.perif-table tr:last-child td {
+    border-bottom: none;
+}
+
+.perif-table tr:hover {
+    background-color: #2C2C2C;
+}
+
+/* --------------------------- PATIČKA ---------------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: #888;
+    border-top: 1px solid #2C2C2C;
+}
+
+/* --------------------------- ANIMACE ---------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.obsah {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
