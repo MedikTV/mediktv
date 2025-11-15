@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -10,79 +9,67 @@
 
 <body>
 
-<!-- HLAVIČKA -->
-<header class="hlavicka">
-    <img src="images/hlava.png" alt="MC hlava" class="logo">
-    <nav class="menu">
+<header class="header">
+    <div class="left-nav">
         <a href="index.html">Domů</a>
         <a href="ome.html">O mně</a>
         <a href="pcsetup.html">Hardware</a>
-        <a href="projekty.html" class="aktivni">Projekty</a>
+        <a class="active" href="projekty.html">Projekty</a>
         <a href="galerie.html">Galerie</a>
         <a href="kontakt.html">Kontakt</a>
-    </nav>
+    </div>
+
+    <div class="right-nav">
+        <a href="mailto:mediktv@outlook.cz">Email</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+    </div>
 </header>
 
-<!-- OBSAH STRÁNKY -->
-<div class="obsah">
+<main class="content">
     <h1>Moje projekty</h1>
 
-    <div class="setup-container">
+    <div class="projects-grid">
 
         <!-- Projekt 1 -->
-        <div class="setup-box">
-            <img src="images/prevodnikcasu.png" alt="Převodník času" class="setup-img" id="prevod-img" data-lightbox="true">
-            <div class="setup-text">
-                <h2>Převodník času</h2>
-                <p>
-                    Jednoduchý převodník napsaný v Pythonu. 
-                    Umožňuje převádět jednotky času. 
-                    Byl vytvořen, protože jsem nechtěl používat webové převodníky od jiných lidí.
-                </p>
-            </div>
+        <div class="project-card">
+            <img id="prevod-img" src="images/prevodnikcasu.png" alt="Převodník času" class="project-img">
+            <h2>Převodník času</h2>
+            <p>
+                Jednoduchý převodník napsaný v Pythonu.  
+                Umožňuje převádět jednotky času a vznikl jako vlastní alternativa k online převodníkům.
+            </p>
         </div>
 
-       <!-- Projekt 2 -->
-<div class="setup-box">
-    <img src="images/pyos_desktop.png" alt="Py systém" class="setup-img" id="pyos-img" data-lightbox="true">
-    <div class="setup-text">
-        <h2>Simulátor systému</h2>
-        <p>
-            Grafické prostředí vytvořené v Pythonu pomocí knihovny Tkinter. 
-            Obsahuje nastavení, CMD, kalkulačku, poznámkový blok a mnoho dalšího co jěšte není hotovo.
-            Cílem bylo vytvořit základní „mini operační systém“.
-           <a href="https://www.youtube.com/watch?v=9o4DAuoRabQ" target="_blank" style="color: white;">Ukázka</a>
-
-        </p>
-    </div>
-</div>
-
-<!-- Přidáme lightbox (skrytý dokud se neklikne) -->
-<div id="lightbox" class="lightbox">
-    <img id="lightbox-img" src="" alt="Zvětšený obrázek">
-</div>
-
+        <!-- Projekt 2 -->
+        <div class="project-card">
+            <img id="pyos-img" src="images/pyos_desktop.png" alt="Py systém" class="project-img">
+            <h2>Simulátor systému</h2>
+            <p>
+                Grafické prostředí vytvořené v Pythonu (Tkinter).  
+                Obsahuje nastavení, CMD, kalkulačku, poznámkový blok a další.  
+                <a class="yt-link" href="https://www.youtube.com/watch?v=9o4DAuoRabQ" target="_blank">Ukázka</a>
+            </p>
+        </div>
 
         <!-- Projekt 3 -->
-        <div class="setup-box">
-            <div class="setup-text">
-                <h2>nic</h2>
-                <p>
-                    nic
-                </p>
-            </div>
+        <div class="project-card">
+            <h2>V přípravě</h2>
+            <p>Další projekt se připravuje.</p>
         </div>
 
     </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="">
 </div>
 
-<!-- PATIČKA -->
-<footer class="paticka">
+<footer class="footer">
     <p>&copy; 2025 Petruv web</p>
 </footer>
 
-    <script src="script.js"></script>
-
-
+<script src="script.js"></script>
 </body>
 </html>
