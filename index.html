@@ -2,46 +2,76 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Petruv web</title>
-    <link rel="stylesheet" href="vzhled.css">
-    
-    <meta charset="UTF-8">
-    <title>Petruv web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petir | IT Portfolio</title>
     <link rel="stylesheet" href="vzhled.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
 </head>
 <body>
 
-<!-- Jednoduchá hlavička s hlavou a menu -->
+<!-- HLAVIČKA -->
 <header class="hlavicka">
-    <img src="images/hlava.png" alt="MC hlava" class="logo">
+    <div class="logo-container">
+        <img src="images/hlava.png" alt="Logo" class="logo">
+        <h1>Petir</h1>
+    </div>
     <nav class="menu">
-        <a href="index.html">Domů</a>
+        <a href="index.html" class="active">Domů</a>
         <a href="ome.html">O mně</a>
         <a href="pcsetup.html">Hardware</a>
         <a href="projekty.html">Projekty</a>
         <a href="galerie.html">Galerie</a>
         <a href="kontakt.html">Kontakt</a>
-        
     </nav>
 </header>
 
+<!-- HLAVNÍ OBSAH -->
+<main class="uvod">
 
+    <!-- HERO sekce (místo starého úvodu + fotky) -->
+    <section class="hero">
+        <h2>Vítej na mém webu!</h2>
+        <p>
+            Jmenuji se <strong>Petir</strong> a jsem student IT.<br>
+            Baví mě hardware, software, programování a různé menší projekty.
+        </p>
 
-<!-- Hlavní obsah -->
-<div class="obsah">
-    <h1>Vítej na mém webu</h1>
-    <p>Jmenuji se Petr</p>
-    <p>Student IT</p>
-    <img src="profil.png" alt="Já" width="300">
-</div>
+        <!-- Profilová fotka ze starého webu -->
+        <img src="profil.png" alt="Já" style="
+            width: 240px;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        ">
+    </section>
+
+    <!-- 3 moderní karty -->
+    <section class="karty">
+        <div class="card">
+            <h3>💻 Hardware</h3>
+            <p>Moje počítačové sestavy a periferie přehledně na jednom místě.</p>
+            <a href="pcsetup.html" class="card-btn">Zobrazit</a>
+        </div>
+
+        <div class="card">
+            <h3>🧠 Projekty</h3>
+            <p>Python nástroje, aplikace a experimentální projekty, které vytvářím.</p>
+            <a href="projekty.html" class="card-btn">Zobrazit</a>
+        </div>
+
+        <div class="card">
+            <h3>📷 Galerie</h3>
+            <p>Fotky mých zařízení, setupů a ukázky mé práce.</p>
+            <a href="galerie.html" class="card-btn">Zobrazit</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- PATIČKA -->
+<footer class="footer">
+    <p>© 2025 Petir — Student IT | Vytvořeno s 💻 a ☕</p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
