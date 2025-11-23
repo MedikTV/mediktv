@@ -370,6 +370,42 @@ a {
     transform: scale(1.01);              /* zvětšení při hover */
 }
 
+/* Projekty – Grid layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* vždy 3 sloupce */
+    gap: 25px; /* mezery mezi kartami */
+    padding: 0 20px 60px; /* okraje kolem gridu */
+}
+
+.project-card {
+    background-color: var(--box);
+    color: var(--text);
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* zajistí stejné vertikální rozložení */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+
+
 
 
 
