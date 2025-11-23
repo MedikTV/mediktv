@@ -356,6 +356,13 @@ a {
     color: var(--accent);
 }
 
+.yt-link {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+
+
 
 
 
