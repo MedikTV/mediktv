@@ -367,8 +367,9 @@ a {
 }
 
 #lightbox-img:hover {
-    transform: scale(1.02);              /* zvětšení při hover */
+    transform: scale(1.01);              /* zvětšení při hover */
 }
+
 
 
 
