@@ -361,9 +361,14 @@ a {
     color: var(--accent);
 }
 
-#lightbox-img:hover {
-    transform: scale(1.02); /* nebo jiný efekt */
-    box-shadow: 0 0 25px rgba(0,255,255,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+#lightbox-img {
+    transform: scale(1);           /* výchozí velikost ve lightboxu */
+    transition: transform 0.3s ease;  /* plynulý přechod */
 }
+
+#lightbox-img:hover {
+    transform: scale(1.02);              /* zvětšení při hover */
+}
+
+
 
