@@ -375,6 +375,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* vždy 3 sloupce */
     gap: 25px; /* mezery mezi kartami */
+    justify-content: center;
     padding: 0 20px 60px; /* okraje kolem gridu */
 }
 
@@ -403,6 +404,7 @@ a {
     transform: scale(1.03);
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
+
 
 
 
