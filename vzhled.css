@@ -1,3 +1,4 @@
+/* ======================= ZÁKLADNÍ STRUKTURA ======================= */
 html, body {
     height: 100%;
     margin: 0;
@@ -6,40 +7,47 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
     flex: 1;
 }
 
-
 /* ======================= PROMĚNNÉ ======================= */
 :root {
-    --bg: #121212;       /* pozadí webu */
-    --text: #E0E0E0;     /* text */
-    --box: #1F1F1F;      /* karty, hlavička, footer */
-    --accent: #4AA8FF;   /* modrá akcentní barva */
-    --border: #2C2C2C;   /* ohraničení */
-    --box-hover: #242424;
+    /* DARK MODE (default) */
+    --bg: #0A0A0A; /* Pozadí pro luxusní tmavý vzhled */
+    --text: #F0F0F0; /* Text světle šedý */
+    --box: #1A1A1A;  /* Karty, hlavička, footer */
+    --accent: #007BFF;  /* Modrá akcentní barva */
+    --border: #333333; /* Jemné ohraničení */
+    --box-hover: #222222;  /* Pozadí pro sudé řádky a hover karet */
+    --table-row-hover: #333333; /* Jemný hover pro řádky tabulky (Nově definováno) */
+    --shadow: rgba(0, 0, 0, 0.6);
 }
 
-.light {
-    --bg: #F5F5F7;      /* celá stránka světlá */
-    --text: #202020;    /* text tmavý */
-    --box: #EFEFF2;     /* hlavička, karty, tabulky, patička */
-    --accent: #2D6AE3;  /* modrá akcentní barva */
-    --border: #D0D0D0;  /* jemné linky */
-    --box-hover: #f1f1f1;
+.light-theme { 
+    /* LIGHT MODE */
+    --bg: #F8F8F8;  /* Světlejší, čisté pozadí */
+    --text: #1C1C1C; /* Tmavý text */
+    --box: #FFFFFF; /* Hlavička, karty, patička */
+    --accent: #2D6AE3;  /* Modrá akcentní barva */
+    --border: #E0E0E0;  /* Jemné linky */
+    --box-hover: #F1F1F1;
+    --table-row-hover: #EBEBEB; /* Jemný hover pro řádky tabulky (Nově definováno) */
+    --shadow: rgba(0, 0, 0, 0.15);
 }
 
-/* ======================= ZÁKLAD ======================= */
+/* ======================= ZÁKLAD A TYPOGRAFIE ======================= */
 body {
-    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
     background-color: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    transition: background-color 0.35s ease, color 0.35s ease;
+    /* JEDNOTNÁ RYCHLOST PŘECHODU PRO BODY (FIX) */
+    transition: background-color 0.4s ease, color 0.4s ease; 
 }
 
 a {
@@ -48,38 +56,50 @@ a {
     transition: color 0.3s ease;
 }
 
+a:hover {
+    color: var(--accent);
+}
+
+h1, h2, h3 {
+    color: var(--text);
+    margin-top: 0;
+    /* ZAJIŠTĚNÍ PŘECHODU BARVY PRO NADPISY (FIX) */
+    transition: color 0.4s ease; 
+}
+
 /* ======================= HLAVIČKA ======================= */
 .hlavicka {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
+    padding: 15px 5%;
     background-color: var(--box);
     color: var(--text);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    transition: background-color 0.35s ease, color 0.35s ease;
-    position: relative;
+    box-shadow: 0 4px 12px var(--shadow); 
+    /* JEDNOTNÁ RYCHLOST PŘECHODU PRO HLAVIČKU (FIX) */
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .logo-container h1 {
-    font-size: 22px;
+    font-size: 24px;
     margin: 0;
-    color: var(--text);
+    font-weight: 700;
 }
 
 /* Menu vycentrované */
@@ -88,212 +108,229 @@ a {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 .menu a {
     font-weight: 600;
-    transition: color 0.3s, transform 0.2s;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.4s ease; /* Přidán transition */
 }
 
-.menu a:hover,
+/* Luxusní podtržení */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+    width: 100%;
+}
+
 .menu a.active {
     color: var(--accent);
-    transform: translateY(-2px);
 }
 
 /* ======================= PŘEPÍNAČ MOTIVU ======================= */
 .theme-toggle {
-    width: 50px;
-    height: 26px;
+    width: 55px;
+    height: 28px;
     border-radius: 50px;
-    background-color: var(--box);
-    border: 2px solid var(--border);
+    background-color: var(--box-hover);
+    border: 1px solid var(--border);
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: all 0.35s ease;
 }
 
 .toggle-ball {
     position: absolute;
-    width: 22px;
-    height: 23px;
+    width: 26px;
+    height: 26px;
     background-color: var(--accent);
     border-radius: 50%;
     top: 1px;
     left: 1px;
-    transition: left 0.35s ease;
-}
-
-.light .toggle-ball {
-    left: 27px;
-}
-
-/* Ikona uvnitř kolečka */
-.toggle-ball {
+    transition: left 0.35s ease, background-color 0.35s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
-    color: white;
+    font-size: 15px;
 }
 
-/* DARK MODE – výchozí ikonka měsíce */
+.light-theme .toggle-ball {
+    left: 28px;
+}
+
+/* Ikony */
 .toggle-ball::after {
     content: "🌙";
-}
-
-/* LIGHT MODE – ikonka slunce */
-.light .toggle-ball::after {
-    content: "☀️";
-}
-
-.toggle-ball::after {
     transition: transform 0.3s;
 }
 
-.light .toggle-ball::after {
-    transform: rotate(180deg);
+.light-theme .toggle-ball::after {
+    content: "☀️";
 }
 
-
-
-/* ======================= HERO ======================= */
+/* ======================= HERO (index.html) ======================= */
 .hero {
     text-align: center;
-    padding: 30px 20px 15px;
+    padding: 60px 5% 40px;
+    /* Plynulý přechod pro gradient pozadí */
+    background: linear-gradient(180deg, var(--box), var(--bg));
+    margin-bottom: 30px;
+    transition: background 0.4s ease; 
 }
 
 .hero h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: var(--text);
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: var(--accent);
+    text-shadow: 0 2px 4px var(--shadow);
 }
 
 .hero p {
-    font-size: 18px;
-    color: var(--text);
-    max-width: 700px;
-    margin: 0 auto 25px;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
 }
 
-/* ======================= KARTY ======================= */
+.hero img {
+    border: 4px solid var(--accent);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+/* ======================= KARTY (index.html) ======================= */
 .karty {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
-    padding: 0 20px 60px;
+    gap: 30px;
+    padding: 0 5% 80px;
 }
 
-.card, .setup-box, .project-card {
+.card {
     background-color: var(--box);
-    color: var(--text);
-    border-radius: 15px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px var(--shadow);
     width: 300px;
-    padding: 25px;
+    padding: 30px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
+    /* Přidán transition pro border */
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, background-color 0.4s ease, border 0.4s ease; 
+    border: 1px solid var(--border);
 }
 
-.card:hover, .setup-box:hover, .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px var(--shadow);
+    background-color: var(--box-hover);
 }
 
-/* Nadpis karty */
-.card h3, .setup-box h2, .project-card h3 {
+.card h3 {
+    font-size: 1.8em;
     color: var(--accent);
+    margin-bottom: 15px;
 }
 
-/* Odkazy na kartách */
 .card-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     color: var(--accent);
-    font-weight: bold;
+    font-weight: 700;
+    padding: 8px 15px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .card-btn:hover {
-    text-decoration: underline;
+    background-color: var(--accent);
+    color: var(--box);
+    text-decoration: none;
 }
+
 
 /* ======================= PATIČKA ======================= */
 .footer {
     background-color: var(--box);
     color: var(--text);
     text-align: center;
-    padding: 7px;
+    padding: 15px;
     font-size: 14px;
     border-top: 1px solid var(--border);
-    transition: background-color 0.35s ease, color 0.35s ease;
+    /* JEDNOTNÁ RYCHLOST PŘECHODU PRO PATIČKU (FIX) */
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease; 
+    margin-top: auto;
 }
 
-/* ======================= OBECNÉ ======================= */
-.uvod, main {
-    animation: fadeIn 0.5s ease-in-out;
+/* ======================= ANIMACE ======================= */
+.uvod, main.setup-section, main.content {
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Obrázky v projektech / galerii */
-.setup-img, .galerie-img {
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.setup-img:hover, .galerie-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-/* ===== PC Setup / Zařízení ===== */
+/* ======================= PC Setup / Zařízení (pcsetup.html) ======================= */
 .setup-section {
+    padding: 40px 5%;
     text-align: center;
-    padding: 40px 20px;
 }
 
-.setup-section h1, 
-.setup-section h2 {
-    margin-bottom: 25px;
-    color: var(--text);
-    transition: color 0.35s ease;
+.setup-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    /* ODSTRANĚNO MODRÉ PODTRŽENÍ NADPISU (FIX) */
+    /* border-bottom: 3px solid var(--accent); */
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 .setup-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-/* box styl místo tabulek pro Hlavní PC / Notebook */
 .setup-box {
     background-color: var(--box);
     border-radius: 15px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px var(--shadow);
     width: 350px;
-    padding: 25px;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    padding: 30px;
+    transition: all 0.4s ease;
     text-align: left;
+    /* ODSTRANĚNO MODRÉ OHRANIČENÍ PC/NT BOXU (FIX) */
+    /* border-left: 5px solid var(--accent); */
+    border: 1px solid var(--border); /* Nahrazeno neutrálním ohraničením */
 }
 
 .setup-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px var(--shadow);
     background-color: var(--box-hover);
 }
 
 .setup-box h2 {
-    margin-top: 0;
+    font-size: 1.8em;
     color: var(--accent);
-    margin-bottom: 15px;
-    text-align: center; /* nadpis uprostřed */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .setup-box ul {
@@ -303,45 +340,53 @@ a {
 }
 
 .setup-box ul li {
-    font-size: 16px;
+    font-size: 1.05em;
     line-height: 1.5;
-    padding: 6px 0;
-    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    justify-content: space-between;
 }
 
 .setup-box ul li:last-child {
     border-bottom: none;
 }
 
-/* Periferie */
+.setup-box ul li b {
+    /* Opraveno: Barva b na textovou, aby akcentní modrá zbytečně nekřičela */
+    color: var(--text); 
+    font-weight: 600;
+    min-width: 80px;
+    margin-right: 15px;
+}
+
+/* Periferie (Tabulka) */
 .perif-section {
     text-align: center;
     margin-top: 60px;
 }
 
 .perif-section h2 {
-    margin-bottom: 25px;
-    color: var(--text);
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 .perif-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    padding-bottom: 60px;
 }
 
 .perif-table {
-    width: 350px;
-    max-width: 90%;
-    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    border-collapse: separate;
+    border-spacing: 0;
     border-radius: 15px;
     overflow: hidden;
     background-color: var(--box);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    transition: background-color 0.35s, color 0.35s;
-    text-align: left;
-    margin-bottom: 20px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .perif-table th {
@@ -349,79 +394,166 @@ a {
     color: #fff;
     font-weight: bold;
     text-align: center;
-    padding: 12px;
+    padding: 15px 12px;
+    font-size: 1.1em;
 }
 
 .perif-table td {
-    padding: 10px 12px;
+    padding: 12px;
     color: var(--text);
     border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s;
 }
 
 .perif-table tr:last-child td {
     border-bottom: none;
 }
 
-.perif-table tr:hover {
-    background-color: rgba(0,170,255,0.1);
+.perif-table tr:nth-child(even) {
+    background-color: var(--box-hover);
 }
 
-/* Modré nadpisy CPU / GPU / RAM atd. v setup-box */
-.setup-box ul li b {
+/* OPRAVA HOVER EFEKTU TABULKY (FIX - Jemný neakcentní hover) */
+.perif-table tr:hover {
+    background-color: var(--table-row-hover); /* Použití jemného hover pozadí */
+}
+.perif-table tr:hover td {
+    color: var(--text); /* Text zůstává v původní barvě */
+}
+.perif-table tr:hover td a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* ======================= Projekty (projekty.html) ======================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--box);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--border);
+    min-height: 450px; 
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+    background-color: var(--box-hover);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card img:hover {
+    transform: scale(1.03);
+}
+
+.project-card h3 {
     color: var(--accent);
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .yt-link {
     font-weight: bold;
     color: var(--accent);
+    transition: color 0.3s;
+}
+
+.yt-link:hover {
+    color: inherit;
+}
+
+/* ======================= LIGHTBOX ======================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background 0.4s ease; /* Přidán transition */
 }
 
 #lightbox-img {
-    transform: scale(1);           /* výchozí velikost ve lightboxu */
-    transition: transform 0.3s ease;  /* plynulý přechod */
-}
-
-#lightbox-img:hover {
-    transform: scale(1.01);              /* zvětšení při hover */
-}
-
-/* Projekty – Grid layout */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* vždy 3 sloupce */
-    gap: 25px; /* mezery mezi kartami */
-    justify-content: center;
-    padding: 0 20px 60px; /* okraje kolem gridu */
-}
-
-.project-card {
-    background-color: var(--box);
-    color: var(--text);
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 15px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    padding: 25px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* zajistí stejné vertikální rozložení */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* ======================= RESPONZIVITA ======================= */
+@media (max-width: 900px) {
+    .hlavicka {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .menu {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        order: 3;
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .theme-toggle {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .karty {
+        padding: 0 20px 60px;
+    }
+
+    .card, .setup-box, .project-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .perif-table {
+        max-width: 95%;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
