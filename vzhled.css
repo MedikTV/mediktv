@@ -178,7 +178,7 @@ a {
 }
 
 /* ======================= KARTY ======================= */
-.karty {
+.karty, kartyIN {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -198,27 +198,41 @@ a {
     min-height: 330px;
 }
 
-.card:hover, .setup-box:hover, .project-card:hover {
+.cardIN {
+    background-color: var(--box);
+    color: var(--text);
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
+    
+}
+
+.card:hover, .setup-box:hover, .project-card:hover, cardIN:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
 /* Nadpis karty */
-.card h3, .setup-box h2, .project-card h3 {
+.card h3, .setup-box h2, .project-card h3, cardIN h3 {
     color: var(--accent);
 }
 
 /* Odkazy na kartách */
-.card-btn {
+.card-btn, cardIN-btn {
     display: inline-block;
     margin-top: 15px;
     color: var(--accent);
     font-weight: bold;
 }
 
-.card-btn:hover {
+.card-btn:hover, cardIN-btn:hover {
     text-decoration: underline;
 }
+
+
 /* ======================= PATIČKA ======================= */
 .footer {
     background-color: var(--box);
@@ -414,6 +428,7 @@ a {
     margin-bottom: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 
 
