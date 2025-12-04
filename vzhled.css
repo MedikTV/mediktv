@@ -71,8 +71,8 @@ a {
 }
 
 .logo {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 10px;
 }
 
@@ -418,6 +418,7 @@ a {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
+
 
 
 
