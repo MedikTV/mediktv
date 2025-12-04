@@ -406,7 +406,7 @@ a {
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
     display: flex;
     flex-direction: column;
-    min-height: 330px;
+    min-height: 400px;
 }
 
 .project-card img {
@@ -416,6 +416,7 @@ a {
     margin-bottom: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 
 
