@@ -198,9 +198,11 @@ a {
 }
 
 
-.card:hover, .setup-box:hover, .project-card:hover, cardIN:hover {
+.card:hover, .setup-box:hover, .project-card:hover, .gallery-card:hover, cardIN:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    /* Přidal jsem i background-color pro konzistentní chování s setup-box */
+    background-color: var(--box-hover);
 }
 
 /* Nadpis karty */
@@ -417,6 +419,69 @@ a {
     margin-bottom: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+}
+
+/* ======================= GALERIE ======================= */
+/* Gallery Grid layout - stejné jako Projects Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* vždy 3 sloupce */
+    gap: 25px; /* mezery mezi kartami */
+    justify-content: center;
+    padding: 0 20px 60px; /* okraje kolem gridu */
+    max-width: 1200px; /* Omezení šířky pro lepší vzhled na velkých obrazovkách */
+    margin: 0 auto; /* vycentrování */
+}
+
+.gallery-card {
+    /* Základní styly přebíráme z project-card/setup-box pro konzistentní vzhled */
+    background-color: var(--box);
+    color: var(--text);
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Udržuje karty konzistentně vysoké */
+}
+
+/* Obrázky v kartě galerie */
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Zajistí, že obrázek pokryje celou plochu bez deformace */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-card h3 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.gallery-card p {
+    flex-grow: 1; /* Zatlačí odkaz dolů */
+}
+
+
+/* Přidání nové třídy do selektorů pro HOVER animaci */
+.card:hover, .setup-box:hover, .project-card:hover, .gallery-card:hover { /* Důležité: Tuto řádku ZMĚŇTE ve stávajícím CSS */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    background-color: var(--box-hover); /* Přidáno pro konzistenci s setup-box */
+}
+
+/* Původní selektor pro hover, který byste měl nahradit novým, který zahrnuje .gallery-card: */
+/* PŮVODNÍ: .card:hover, .setup-box:hover, .project-card:hover, cardIN:hover { ... } */
+
+/* Pokud nahrazujete původní selektor, přidejte i tento, aby fungovalo zvětšení obrázku po najetí: */
+.gallery-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
 
