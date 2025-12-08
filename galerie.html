@@ -1,55 +1,28 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Petruv web – Galerie</title>
-    <link rel="stylesheet" href="vzhled.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
-
-<body>
-
-<header class="hlavicka">
-    <div class="logo-container">
-        <img src="images/hlava.png" alt="Logo" class="logo">
-        <h1>NotPetaS</h1>
-    </div>
-
-    <nav class="menu">
-        <a href="index.html">Domů</a>
-        <a href="ome.html">O mně</a>
-        <a href="pcsetup.html">Hardware</a>
-        <a href="projekty.html">Projekty</a>
-        <a href="galerie.html" class="active">Galerie</a>
-    </nav>
-
-    <!-- Přidán theme toggle stejně jako na indexu -->
-    <div class="theme-toggle" id="themeToggle">
-        <div class="toggle-ball"></div>
-    </div>
-</header>
-
 <main class="content" style="padding: 40px 20px; text-align:center;">
     <h1 style="margin-bottom: 30px;">Galerie</h1>
 
-    
-        
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="images/galerie_zima2024.jpg" alt="Obrázek pro Zimu 2024" loading="lazy">
+            <h3>Zima 2024</h3>
+            <p>Sníh, hory a lyžování.</p>
+            <a href="galerie_zima2024.html" class="card-btn">Zobrazit galerii &gt;</a>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/galerie_leto2023.jpg" alt="Obrázek pro Léto 2023" loading="lazy">
+            <h3>Léto 2023</h3>
+            <p>Příroda, kempování a výlety.</p>
+            <a href="galerie_leto2023.html" class="card-btn">Zobrazit galerii &gt;</a>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/galerie_hry.jpg" alt="Obrázek pro Hry a Screenshoty" loading="lazy">
+            <h3>Hry a Screenshoty</h3>
+            <p>Zábavné momenty ze světa her.</p>
+            <a href="galerie_hry.html" class="card-btn">Zobrazit galerii &gt;</a>
+        </div>
+
+        </div>
 </main>
-    <!-- Lightbox -->
-<div id="lightbox" class="lightbox" 
-     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:999;">
-    <img id="lightbox-img" src="" alt="" 
-         style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 25px rgba(255,255,255,0.3);">
-</div>
-
-
-<footer class="footer">
-    <p>&copy; 2025 Petruv web</p>
-</footer>
-
-<script src="lightmode.js"></script>
-<script src="script.js"></script>    
-
-    
-</body>
-</html>
