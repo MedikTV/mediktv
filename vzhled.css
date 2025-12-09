@@ -421,6 +421,10 @@ a {
     cursor: pointer;
 }
 
+.projekt-card yt.link {
+    flex-grow: 1; /* Zatlačí odkaz dolů */
+}
+
 /* ======================= GALERIE ======================= */
 /* Gallery Grid layout - stejné jako Projects Grid */
 .gallery-grid {
@@ -483,6 +487,7 @@ a {
    /* transform: scale(1.03); */
    /* box-shadow: 0 0 15px rgba(255,255,255,0.2); */
 /*}*/
+
 
 
 
