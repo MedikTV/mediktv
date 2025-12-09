@@ -218,7 +218,7 @@ a {
     font-weight: bold;
 }
 
-.card-btn {
+.card-btn, .yt-link a:hover{
     text-decoration: underline;
 }
 
@@ -471,6 +471,9 @@ a {
 }
 
 
+   
+
+
 /* Přidání nové třídy do selektorů pro HOVER animaci */
 .card:hover, .setup-box:hover, .project-card:hover, .gallery-card:hover { /* Důležité: Tuto řádku ZMĚŇTE ve stávajícím CSS */
     transform: translateY(-5px);
@@ -486,6 +489,7 @@ a {
    /* transform: scale(1.03); */
    /* box-shadow: 0 0 15px rgba(255,255,255,0.2); */
 /*}*/
+
 
 
 
