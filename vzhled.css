@@ -479,10 +479,11 @@ a {
 /* PŮVODNÍ: .card:hover, .setup-box:hover, .project-card:hover, cardIN:hover { ... } */
 
 /* Pokud nahrazujete původní selektor, přidejte i tento, aby fungovalo zvětšení obrázku po najetí: */
-.gallery-card img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
+/* .gallery-card img:hover */
+   /* transform: scale(1.03); */
+   /* box-shadow: 0 0 15px rgba(255,255,255,0.2); */
+/*}*/
+
 
 
 
