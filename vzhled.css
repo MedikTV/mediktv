@@ -218,7 +218,7 @@ a {
     font-weight: bold;
 }
 
-.card-btn:hover {
+.card-btn .yt-link :hover {
     text-decoration: underline;
 }
 
@@ -494,6 +494,7 @@ a {
    /* transform: scale(1.03); */
    /* box-shadow: 0 0 15px rgba(255,255,255,0.2); */
 /*}*/
+
 
 
 
