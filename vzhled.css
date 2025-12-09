@@ -336,7 +336,7 @@ a {
 }
 
 .perif-table {
-    width: 600px;
+    width: 650px;
     max-width: 90%;
     border-collapse: collapse;
     border-radius: 15px;
@@ -483,6 +483,7 @@ a {
     transform: scale(1.03);
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
+
 
 
 
